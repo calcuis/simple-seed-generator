@@ -1,7 +1,7 @@
 import secrets, mnemonic
 import tkinter as tk
 
-def generate12Seed():
+def generate12():
     language = 'english'
     seed = secrets.token_bytes(16)
     mnemonic_words = mnemonic.Mnemonic(language).to_mnemonic(seed)
@@ -11,7 +11,7 @@ def generate12Seed():
     f.write(mnemonic_word_list)
     f.close()
 
-def generate24Seed():
+def generate24():
     language = 'english'
     seed = secrets.token_bytes(32)
     mnemonic_words = mnemonic.Mnemonic(language).to_mnemonic(seed)
@@ -26,8 +26,8 @@ window = tk.Tk()
 window.title("Seed Generator")
 window.columnconfigure(0, minsize=800)
 
-btn_12 = tk.Button(text="Generate 12-word Seedphrase", command=generate12Seed)
-btn_24 = tk.Button(text="Generate 24-word Seedphrase", command=generate24Seed)
+btn_12 = tk.Button(text="Generate 12-word Seedphrase", command=generate12)
+btn_24 = tk.Button(text="Generate 24-word Seedphrase", command=generate24)
 lbl_result = tk.Label(foreground="red")
 
 btn_12.grid(row=0, column=0, sticky="nsew")
