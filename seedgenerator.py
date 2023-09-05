@@ -6,6 +6,7 @@ def generate12():
     seed = secrets.token_bytes(16)
     mnemonic_words = mnemonic.Mnemonic(language).to_mnemonic(seed)
     mnemonic_word_list = " ".join(mnemonic_words.split())
+    print(mnemonic_word_list)
     lbl_result["text"] = mnemonic_word_list
     f=open('seed.txt', 'w')
     f.write(mnemonic_word_list)
@@ -16,7 +17,7 @@ def generate24():
     seed = secrets.token_bytes(32)
     mnemonic_words = mnemonic.Mnemonic(language).to_mnemonic(seed)
     mnemonic_word_list = " ".join(mnemonic_words.split())
-    # print the mnemonic as output
+    print(mnemonic_word_list)
     lbl_result["text"] = mnemonic_word_list
     f=open('seed.txt', 'w')
     f.write(mnemonic_word_list)
