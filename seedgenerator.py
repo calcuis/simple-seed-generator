@@ -1,5 +1,9 @@
 import secrets, mnemonic
-import tkinter as tk
+from tkinter import *
+
+window = Tk()
+window.title("Seed Generator")
+window.columnconfigure([0, 1, 2, 3, 4], minsize=180)
 
 def generate12():
     language = 'english'
@@ -7,10 +11,31 @@ def generate12():
     mnemonic_words = mnemonic.Mnemonic(language).to_mnemonic(seed)
     mnemonic_word_list = " ".join(mnemonic_words.split())
     print(mnemonic_word_list)
-    lbl_result["text"] = mnemonic_word_list
-    f=open('seed.txt', 'w')
-    f.write(mnemonic_word_list)
-    f.close()
+    string_var.set(mnemonic_word_list)
+
+def generate15():
+    language = 'english'
+    seed = secrets.token_bytes(20)
+    mnemonic_words = mnemonic.Mnemonic(language).to_mnemonic(seed)
+    mnemonic_word_list = " ".join(mnemonic_words.split())
+    print(mnemonic_word_list)
+    string_var.set(mnemonic_word_list)
+
+def generate18():
+    language = 'english'
+    seed = secrets.token_bytes(24)
+    mnemonic_words = mnemonic.Mnemonic(language).to_mnemonic(seed)
+    mnemonic_word_list = " ".join(mnemonic_words.split())
+    print(mnemonic_word_list)
+    string_var.set(mnemonic_word_list)
+
+def generate21():
+    language = 'english'
+    seed = secrets.token_bytes(28)
+    mnemonic_words = mnemonic.Mnemonic(language).to_mnemonic(seed)
+    mnemonic_word_list = " ".join(mnemonic_words.split())
+    print(mnemonic_word_list)
+    string_var.set(mnemonic_word_list)
 
 def generate24():
     language = 'english'
@@ -18,21 +43,22 @@ def generate24():
     mnemonic_words = mnemonic.Mnemonic(language).to_mnemonic(seed)
     mnemonic_word_list = " ".join(mnemonic_words.split())
     print(mnemonic_word_list)
-    lbl_result["text"] = mnemonic_word_list
-    f=open('seed.txt', 'w')
-    f.write(mnemonic_word_list)
-    f.close()
+    string_var.set(mnemonic_word_list)
 
-window = tk.Tk()
-window.title("Seed Generator")
-window.columnconfigure(0, minsize=800)
+btn_12 = Button(text = "Generate 12-Word Seed", command = generate12)
+btn_15 = Button(text = "Generate 15-Word Seed", command = generate15)
+btn_18 = Button(text = "Generate 18-Word Seed", command = generate18)
+btn_21 = Button(text = "Generate 21-Word Seed", command = generate21)
+btn_24 = Button(text = "Generate 24-Word Seed", command = generate24)
 
-btn_12 = tk.Button(text="Generate 12-word Seedphrase", command=generate12)
-btn_24 = tk.Button(text="Generate 24-word Seedphrase", command=generate24)
-lbl_result = tk.Label(foreground="red")
+string_var = StringVar()
+seed = Entry(textvariable = string_var)
 
 btn_12.grid(row=0, column=0, sticky="nsew")
-btn_24.grid(row=1, column=0, sticky="nsew")
-lbl_result.grid(row=2, column=0)
+btn_15.grid(row=0, column=1, sticky="nsew")
+btn_18.grid(row=0, column=2, sticky="nsew")
+btn_21.grid(row=0, column=3, sticky="nsew")
+btn_24.grid(row=0, column=4, sticky="nsew")
+seed.grid(row=1, columnspan=5, sticky="nsew")
 
 window.mainloop()
