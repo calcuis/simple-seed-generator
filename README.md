@@ -1,3 +1,3 @@
 ## simple-seed-generator
 
-Generate a 12/24-word seed with log (seed.txt)
+Generate a 12/15/18/21/24-word seed
