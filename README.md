@@ -8,7 +8,7 @@ Import necessary libraries:
 
 `secrets`: This library is used for generating secure random numbers, which are used to create cryptographic seed values.
 
-`mnemonic`: This library is used to convert the randomly generated seed values into human-readable mnemonic phrases.
+`mnemonic`: This library is used to convert the randomly generated seed values into human-readable mnemonic phrases (this is an external library, might need to execute `pip install mnemonic` for pre-installation; if you do not want to use this library, please refer to the seed-generator-py repo, it will help you to build one all depends on internal libraries).
 
 Tk from `tkinter`: This library provides tools for creating GUI applications.
 
