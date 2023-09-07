@@ -25,7 +25,7 @@ The first part (of the code) defines five functions (generate12, generate15, gen
 The second part (of the code) creates five buttons (btn_12, btn_15, btn_18, btn_21, and btn_24) labeled with their respective seed phrase lengths:
 - Each button is associated with its corresponding generate function (e.g., btn_12 calls generate12() when clicked) through the command attribute.
 
-Create an Entry field for displaying the generated seed phrase (coz allowing copy/cut & paste afterwards which Label field do not):
+Create an Entry field for displaying the generated seed phrase (coz allowing copy/cut & paste afterwards which Label field does not):
 - The code creates a single-line text entry widget (seed) to display the generated mnemonic phrase.
 - It is associated with the `string_var` variable, so the generated phrase is displayed in this widget.
 
