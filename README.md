@@ -21,7 +21,6 @@ The code defines five functions (generate12, generate15, generate18, generate21,
 - Converts the binary seed into a mnemonic phrase using the `mnemonic.Mnemonic(language).to_mnemonic(seed)` method.
 - Prints the mnemonic phrase to the console.
 - Sets the `string_var` variable (a Tkinter StringVar) to display the generated mnemonic phrase in the GUI.
-- Create buttons for seed generation:
 
 The code creates five buttons (btn_12, btn_15, btn_18, btn_21, and btn_24) labeled with their respective seed phrase lengths:
 - Each button is associated with its corresponding generate function (e.g., btn_12 calls generate12() when clicked) through the command attribute.
