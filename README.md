@@ -19,7 +19,6 @@ The code defines five functions (generate12, generate15, generate18, generate21,
 - Sets the language variable to 'english'.
 - Generates a random binary seed value of the specified length using `secrets.token_bytes()`.
 - Converts the binary seed into a mnemonic phrase using the `mnemonic.Mnemonic(language).to_mnemonic(seed)` method.
-- Cleans up the mnemonic phrase by removing extra spaces.
 - Prints the mnemonic phrase to the console.
 - Sets the `string_var` variable (a Tkinter StringVar) to display the generated mnemonic phrase in the GUI.
 - Create buttons for seed generation:
