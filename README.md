@@ -31,7 +31,7 @@ Create an Entry field for displaying the generated seed phrase (coz allowing cop
 
 Layout the GUI elements:
 - The buttons and the entry field are placed in the window using the grid layout manager.
-- Start the GUI event loop:
+- Start the GUI event loop
 
 The code enters the Tkinter main event loop using `window.mainloop()`, which keeps the GUI application running and responsive to user interactions.
 When you run this code, you will have a GUI application with buttons to generate different-length seed phrases, and the generated phrase will be displayed in the text entry field when you click a button.
