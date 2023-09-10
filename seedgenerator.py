@@ -1,9 +1,9 @@
 import secrets, mnemonic
 from tkinter import *
 
-window = Tk()
-window.title("Seed Generator")
-window.columnconfigure([0, 1, 2, 3, 4], minsize=180)
+root = Tk()
+root.title("Seed Generator")
+root.columnconfigure([0, 1, 2, 3, 4], minsize=180)
 e = Entry()
 
 def generate(number):
@@ -27,4 +27,4 @@ btn_21.grid(row=0, column=3, sticky="nsew")
 btn_24.grid(row=0, column=4, sticky="nsew")
 e.grid(row=1, columnspan=5, sticky="nsew")
 
-window.mainloop()
+root.mainloop()
